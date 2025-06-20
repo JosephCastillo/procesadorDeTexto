@@ -120,6 +120,9 @@ final class Lamina extends JPanel {
 				estiloLetra = letras.getStyle();
 				tamanoLetra = letras.getSize();
 			} else if (menu == "Cursiva" || menu == "Negrita") {
+				if(letras.getStyle() == 1 || letras.getStyle() == 2) {
+					estiloLetra =3;
+				}
 				tipoTexto = letras.getFontName();
 				tamanoLetra = letras.getSize();
 			} else if (menu == "12" || menu == "16" || menu == "20" || menu == "24") {
