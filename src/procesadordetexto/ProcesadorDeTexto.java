@@ -88,55 +88,22 @@ final class Lamina extends JPanel {
 			tamano.add(elemMenu);
 		}
 
-		elemMenu.addActionListener(new GestionaEventos(rotulo, tipoLetra, estilos, tam));
+		
 	}
 
+	
+	
+	
+	
+	
 	// Devuelve la barra de menú para que el marco la use
 	public JMenuBar getBarraMenu() {
 		return menuProcesador;
 	}
-
-	// Clase que gestiona eventos
-	private class GestionaEventos implements ActionListener {
-
-		String tipoTexto, menu;
-
-		int estiloLetra, tamanoLetra;
-
-		// Constructor que detecta que pulsamos.
-		GestionaEventos(String elemento, String texto2, int estilo2, int tamLetra) {
-			tipoTexto = texto2;
-			estiloLetra = estilo2;
-			tamanoLetra = tamLetra;
-			menu = elemento;
-		}
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-
-			letras = textPane.getFont();
-
-			if (menu == "Arial" || menu == "Courier" || menu == "Verdana") {
-				estiloLetra = letras.getStyle();
-				tamanoLetra = letras.getSize();
-			} else if (menu == "Cursiva" || menu == "Negrita") {
-				if(letras.getStyle() == 1 || letras.getStyle() == 2) {
-					estiloLetra =3;
-				}
-				tipoTexto = letras.getFontName();
-				tamanoLetra = letras.getSize();
-			} else if (menu == "12" || menu == "16" || menu == "20" || menu == "24") {
-				estiloLetra = letras.getStyle();
-				tipoTexto = letras.getFontName();
-			}
-
-			textPane.setFont(new Font(tipoTexto, estiloLetra, tamanoLetra));
-			System.out.println("Tipo: " + tipoTexto + " Estilo letra: " + estiloLetra + " Tamanio letra: " + tamanoLetra);
-
-		}
-
-	}
-
+	
+	
+	
+	
 	// ===== ATRIBUTOS =====
 	private JTextPane textPane; // Área de texto
 	private JMenuBar menuProcesador; // Barra de menú
