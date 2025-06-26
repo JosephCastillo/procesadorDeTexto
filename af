@@ -1,0 +1,29 @@
+[33mcommit 8c0fb9cac004676eb0f7c6e94cb0fe731f397b75[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mclase[m[33m, [m[1;31morigin/clase[m[33m)[m
+Author: JosephCastillo <1308004+JosephCastillo@users.noreply.github.com>
+Date:   Fri Jun 20 21:54:22 2025 -0500
+
+    Nueva clase para actualizar el procesador de texto
+
+[33mcommit 2efceb8524221830e292d01981eda43f9339200c[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: JosephCastillo <1308004+JosephCastillo@users.noreply.github.com>
+Date:   Thu Jun 19 19:13:43 2025 -0500
+
+    Termino editor de texto implementando y corrigiendo el bug al seleccionar el tipo letra, cambia al estilo por default
+
+[33mcommit bfe713b2fdde304972ae9681a4b3d8d6274412c9[m
+Author: JosephCastillo <1308004+JosephCastillo@users.noreply.github.com>
+Date:   Thu Jun 19 18:58:44 2025 -0500
+
+    Agrego comportamiento al hacer clic en el menu cambiar el estilo del texto
+
+[33mcommit b1a63965f69d6ae13a491ef37816522b7b6beb17[m
+Author: JosephCastillo <1308004+JosephCastillo@users.noreply.github.com>
+Date:   Wed Jun 18 22:15:27 2025 -0500
+
+    Agrega metodo para crear menu dinamico
+
+[33mcommit bc1eb012d80269f6d04336102edf117c84dbb1b6[m
+Author: JosephCastillo <1308004+JosephCastillo@users.noreply.github.com>
+Date:   Sat Apr 5 16:40:59 2025 -0500
+
+    Readme

@@ -3,6 +3,7 @@ package procesadordetexto;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.text.StyledEditorKit;
 
 public class ProcesadorDeTexto {
 
@@ -81,29 +82,39 @@ final class Lamina extends JPanel {
 	public void configuraMenu(String rotulo, String menu, String tipoLetra, int estilos, int tam) {
 		JMenuItem elemMenu = new JMenuItem(rotulo);
 		if (menu == "fuente") {
+
 			fuente.add(elemMenu);
+			
+			if (tipoLetra == "Arial") {
+				elemMenu.addActionListener(new StyledEditorKit.FontFamilyAction("cambiaLetra", "Arial"));
+			} else if (tipoLetra == "Courier") {
+				elemMenu.addActionListener(new StyledEditorKit.FontFamilyAction("cambiaLetra", "Courier"));
+
+			} else {
+				elemMenu.addActionListener(new StyledEditorKit.FontFamilyAction("cambiaLetra", "Verdana"));
+			}
 		} else if (menu == "estilo") {
+
 			estilo.add(elemMenu);
+
+			if (estilos == Font.BOLD) {
+				elemMenu.addActionListener(new StyledEditorKit.BoldAction());
+			} else {
+				elemMenu.addActionListener(new StyledEditorKit.ItalicAction());
+			}
+
 		} else if (menu == "tamano") {
 			tamano.add(elemMenu);
+			elemMenu.addActionListener(new StyledEditorKit.FontSizeAction("cambiaTamano", tam));
 		}
 
-		
 	}
 
-	
-	
-	
-	
-	
 	// Devuelve la barra de menú para que el marco la use
 	public JMenuBar getBarraMenu() {
 		return menuProcesador;
 	}
-	
-	
-	
-	
+
 	// ===== ATRIBUTOS =====
 	private JTextPane textPane; // Área de texto
 	private JMenuBar menuProcesador; // Barra de menú
